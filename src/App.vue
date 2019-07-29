@@ -1,28 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>{{steps[this.stepIndex]}}</h1>
+    <BasicBinding />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BasicBinding from "./components/BasicBinding.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    BasicBinding
+  },
+  data() {
+    return {
+      stepIndex: 0,
+      steps: ["BasicBinding"]
+    };
+  },
+  computed: {
+    currentStep() {
+      return this.steps[this.stepIndex];
+    }
   }
-}
+};
 </script>
 
 <style>
+body {
+  background-color: lightseagreen;
+  font-family: "Courier New", Courier, monospace;
+  color: lightcyan;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 </style>
