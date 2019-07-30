@@ -13,19 +13,21 @@
 import BasicBinding from "./components/BasicBinding.vue";
 import Hooks from "./components/Hooks.vue";
 import StyleDirective from "./components/StyleDirective.vue";
+import SomethingUseful from "./components/SomethingUseful.vue";
 
 export default {
   name: "app",
   components: {
     BasicBinding,
     Hooks,
-    StyleDirective
+    StyleDirective,
+    SomethingUseful
   },
 
   data() {
     return {
       stepIndex: 0,
-      steps: ["BasicBinding", "Hooks", "StyleDirective"]
+      steps: ["BasicBinding", "Hooks", "StyleDirective", "SomethingUseful"]
     };
   },
 
