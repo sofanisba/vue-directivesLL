@@ -1,7 +1,7 @@
 <template>
   <div id="hooks">
-    <button @click="num++">Click me!</button>
     <h3>Directive Hooks</h3>
+    <button @click="num++">Click me!</button>
     <pre class="hooks" v-showHooks="num">
       Click counter: {{num}}
     </pre>

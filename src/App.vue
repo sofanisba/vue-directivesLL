@@ -12,18 +12,20 @@
 <script>
 import BasicBinding from "./components/BasicBinding.vue";
 import Hooks from "./components/Hooks.vue";
+import StyleDirective from "./components/StyleDirective.vue";
 
 export default {
   name: "app",
   components: {
     BasicBinding,
-    Hooks
+    Hooks,
+    StyleDirective
   },
 
   data() {
     return {
       stepIndex: 0,
-      steps: ["BasicBinding", "Hooks"]
+      steps: ["BasicBinding", "Hooks", "StyleDirective"]
     };
   },
 
