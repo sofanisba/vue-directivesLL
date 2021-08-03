@@ -26,7 +26,7 @@ export default {
   directives: {
     debounce: (el, binding) => {
       const delay = parseInt(binding.value) || 500;
-      el.oninput = debounce(function (evt) {
+      el.oninput = debounce(function () {
         el.dispatchEvent(new Event("change"));
       }, delay);
     },

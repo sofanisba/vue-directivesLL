@@ -12,7 +12,7 @@ export default {
   name: "BasicBinding",
   directives: {
     showGuts: {
-      bind(el, binding, vnode) {
+      bind(el, binding) {
         el.innerText = JSON.stringify(binding, undefined, 2);
       },
     },

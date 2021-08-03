@@ -17,19 +17,19 @@ export default {
   },
   directives: {
     showHooks: {
-      bind(el, binding, vnode) {
+      bind(el) {
         alert("bind");
         el.appendChild(document.createTextNode("bind"));
         el.appendChild(document.createElement("br"));
       },
 
-      inserted(el, binding, vnode) {
+      inserted(el) {
         alert("inserted");
         el.appendChild(document.createTextNode("inserted"));
         el.appendChild(document.createElement("br"));
       },
 
-      update(el, binding, vnode, oldVnode) {
+      update(el, binding) {
         alert("update");
         el.appendChild(
           document.createTextNode(
@@ -39,7 +39,7 @@ export default {
         el.appendChild(document.createElement("br"));
       },
 
-      componentUpdated(el, binding, vnode, oldVnode) {
+      componentUpdated(el, binding) {
         alert("componentUpdated");
         el.appendChild(
           document.createTextNode(

@@ -14,6 +14,7 @@ import BasicBinding from "./components/BasicBinding.vue";
 import Hooks from "./components/Hooks.vue";
 import StyleDirective from "./components/StyleDirective.vue";
 import SomethingUseful from "./components/SomethingUseful.vue";
+import SomethingReallyUseful from "./components/SomethingReallyUseful.vue";
 
 export default {
   name: "app",
@@ -22,12 +23,19 @@ export default {
     Hooks,
     StyleDirective,
     SomethingUseful,
+    SomethingReallyUseful,
   },
 
   data() {
     return {
-      stepIndex: 0,
-      steps: ["BasicBinding", "Hooks", "StyleDirective", "SomethingUseful"],
+      stepIndex: 5,
+      steps: [
+        "BasicBinding",
+        "Hooks",
+        "StyleDirective",
+        "SomethingUseful",
+        "SomethingReallyUseful",
+      ],
     };
   },
 
@@ -86,5 +94,12 @@ button {
   font-weight: bold;
   text-transform: uppercase;
   box-shadow: 2px 2px 2px darkcyan;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 </style>
