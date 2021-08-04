@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="flex">
     <h1>{{ steps[this.stepIndex] }}</h1>
     <component :is="currentStep" />
     <div class="buttons">
@@ -12,6 +12,7 @@
 <script>
 import BasicBinding from "./components/BasicBinding.vue";
 import Hooks from "./components/Hooks.vue";
+import LibraryWrapper from "./components/LibraryWrapper.vue";
 import StyleDirective from "./components/StyleDirective.vue";
 import SomethingUseful from "./components/SomethingUseful.vue";
 import SomethingReallyUseful from "./components/SomethingReallyUseful.vue";
@@ -21,6 +22,7 @@ export default {
   components: {
     BasicBinding,
     Hooks,
+    LibraryWrapper,
     StyleDirective,
     SomethingUseful,
     SomethingReallyUseful,
@@ -28,13 +30,14 @@ export default {
 
   data() {
     return {
-      stepIndex: 5,
+      stepIndex: 0,
       steps: [
         "BasicBinding",
         "Hooks",
         "StyleDirective",
         "SomethingUseful",
         "SomethingReallyUseful",
+        "LibraryWrapper",
       ],
     };
   },
@@ -59,13 +62,6 @@ export default {
 </script>
 
 <style>
-#app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 body {
   background-color: lightseagreen;
   font-family: "Courier New", Courier, monospace;
