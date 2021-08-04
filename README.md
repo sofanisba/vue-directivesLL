@@ -1,29 +1,20 @@
-# directives-ll
+# Vue Directives Examples
 
-## Project setup
-```
-npm install
-```
+The point of this is to provide some handy examples for what you can do with custom VueJS directives using Vue2 paradigms.
 
-### Compiles and hot-reloads for development
-```
+See it live [here](https://vue-directives.web.app/)
+
+
+## Installation and Development
+
+If you want to run this locally:
+
+```bash
+npm install &&\
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Usage
+This project is GNU licensed, though I'm honestly not sure how you would even rip this off given it's so simple.
 
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+I guess if you're using it somewhere, give credit where it's due :)
